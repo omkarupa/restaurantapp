@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { CartDetailsComponent } from './components/cart-details/cart-details.component';
+import { KitchenOrderListComponent } from './components/kitchen-order-list/kitchen-order-list.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CartDetailsComponent } from './components/cart-details/cart-details.com
     InvoiceDetailsComponent,
     ItemOrderListComponent,
     HeaderComponent,
-    CartDetailsComponent
+    CartDetailsComponent,
+    KitchenOrderListComponent
   ],
   imports: [
     BrowserModule,
