@@ -1,0 +1,5 @@
+CREATE src/app/components/table-list/table-list.component.html (26 bytes)
+CREATE src/app/components/table-list/table-list.component.spec.ts (646 bytes)
+CREATE src/app/components/table-list/table-list.component.ts (224 bytes)
+CREATE src/app/components/table-list/table-list.component.css (0 bytes)
+UPDATE src/app/app.module.ts (643 bytes)

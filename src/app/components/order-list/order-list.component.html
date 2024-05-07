@@ -1,0 +1,34 @@
+<div class="main-content">
+  <div class="section-content section-content-p30">
+      <div class="container-fluid">
+        <div class="container mt-5">
+          <h1>Order List</h1>
+          <div class="row">
+              <!-- Loop through orders -->
+              <div class="col-md-6" *ngFor="let order of orderList">
+                  <!-- Order card -->
+                  <div class="card mb-3">
+                      <div class="card-body">
+
+                          <h5 class="card-title">Order ID: {{order.orderId}}</h5>
+                          <p class="card-text">Staff: {{order.staff.staffId}}</p>
+                          <p class="card-text">Table: {{order.restaurantTable.tableNumber}}</p>
+                          <p >Status:
+                            <span *ngFor="let itemOrder of order.itemsOrderedList; " >
+                              <span *ngIf="itemOrder.kitchenItemStatus=='PENDING'">PENDING </span>
+                            </span>
+                          </p>
+                          <p class="card-text"> Items : <span class="card-text" *ngFor="let itemOrder of order.itemsOrderedList">{{itemOrder.menuItem.itemName}},</span></p>
+                          <p class="card-text">Total Price: {{order.totalPrice}}</p>
+                          <a class="primary-btn" routerLink="{{order.orderId}}">
+                            Order Details
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <!-- Repeat for each order -->
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

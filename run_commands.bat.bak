@@ -1,0 +1,30 @@
+@echo off
+
+REM Array of Angular CLI commands
+set commands=(
+  "ng g c components/order-list"
+  "ng g c components/order-details"
+  "ng g c components/kitchen-list"
+  "ng g c components/invoice-list"
+  "ng g c components/invoice-details"
+  "ng g class common/invoice"
+  "ng g class common/item-order"
+  "ng g class common/menu-item"
+  "ng g class common/order"
+  "ng g class common/restaurant-table"
+  "ng g class common/staff"
+  "ng g service services/invoice"
+  "ng g service services/item-order"
+  "ng g service services/menu-item"
+  "ng g service services/order"
+  "ng g service services/restaurant-table"
+  "ng g service services/staff"
+)
+
+REM Loop through the commands and execute them
+for %%i in %commands% do (
+  %%i
+)
+
+echo All commands executed successfully!
+pause

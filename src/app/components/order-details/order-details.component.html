@@ -1,0 +1,56 @@
+<div class="main-content">
+  <div class="section-content section-content-p30">
+      <div class="container-fluid">
+        <div class="container mt-12">
+          <h1>Order Details</h1>
+          <div class="row">
+              <!-- Order Card -->
+              <div class="col-md-12">
+                  <div class="card">
+                      <div class="card-body">
+                          <h5 class="card-title">Order #1</h5>
+                          <div class="row">
+                            <div class="col-md-6">
+                            <p class="card-text"><strong>Order ID:</strong> {{order?.orderId}}</p>
+                            <p class="card-text"><strong>Staff:</strong> {{order?.staff?.staffName}}</p>
+                            <p class="card-text"><strong>Table:</strong> Table {{order?.restaurantTable?.tableNumber}}</p>
+                            <p></p>
+                            <p></p>
+                           </div>
+                            <div class="col-md-6">
+                            <p class="card-text"><strong>Status:</strong> Pending</p>
+                            <p class="card-text"><strong>Total Amount:</strong> {{order?.totalPrice}}</p>
+                            </div>
+
+                          </div>
+                          <!-- Item List -->
+                         <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th>Item Id</th>
+                              <th>Menu Item</th>
+                              <th>Price</th>
+                              <th>Quantity</th>
+                              <th>Sub Total</th>
+                              <th>Kitchen Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let itemOrder of order?.itemsOrderedList; let i = index">
+                              <td>{{i+1}}</td>
+                              <td>{{itemOrder.menuItem.itemName}}</td>
+                              <td>{{itemOrder.menuItem.price}}</td>
+                              <td>{{itemOrder.quantity}}</td>
+                              <td>{{itemOrder.subTotal}}</td>
+                              <td>{{itemOrder.kitchenItemStatus}}</td>
+                            </tr>
+                          </tbody>
+                         </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

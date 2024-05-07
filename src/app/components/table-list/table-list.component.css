@@ -1,0 +1,12 @@
+.custom-card {
+  width: 300px;
+  height: 150px; /* Change the height as needed */
+}
+
+.occupied {
+  background-color: #803D3B; /* Change to the color you want for occupied status */
+}
+
+.vacant {
+  background-color: #B5C18E; /* Change to the color you want for vacant status */
+}

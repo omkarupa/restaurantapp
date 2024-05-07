@@ -1,0 +1,57 @@
+
+      <!-- MAIN CONTENT-->
+			<div class="main-content">
+				<div class="section-content section-content-p30">
+					<div class="container-fluid">
+						<div class="row">
+
+							<div class="col-md-3"  *ngFor="let menuItem of menuItemList">
+								<div class="product-box">
+
+									<a routerLink="product-detail/{{menuItem.menuItemId}}">
+
+										<img src="{{menuItem.imageURLPath}}" class="img-responsive">
+									</a>
+									<a routerLink="product-detail/{{menuItem.menuItemId}}">
+										<h1>{{menuItem.itemName}}t</h1>
+									</a>
+									<h2>Ingredients : {{menuItem.ingredients}}</h2>
+									<div class="price">{{menuItem.price | currency: 'INR'}}</div>
+                  <a (click)="addToCart(menuItem)" class="primary-btn">Add to Cart</a>
+								</div>
+							</div>
+
+
+							<div class="clearfix"></div>
+
+						</div>
+
+						<div class="footer-pagination">
+							<div class="row">
+								<div class="col-md-6"></div>
+								<div class="col-md-3">
+									<div class="items">
+										<label>Item per page</label> <select>
+											<option>10</option>
+											<option>20</option>
+											<option>30</option>
+											<option>40</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="number">1 - 10 of 100</div>
+								</div>
+								<div class="col-md-1">
+									<div class="arrows">
+										<a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+										<a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		    <!-- END MAIN CONTENT-->
